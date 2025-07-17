@@ -1,0 +1,68 @@
+{
+    "manifest_version": 3,
+    "name": "Interview Integrity Guard - Deepfake Detection",
+    "version": "2.0.0",
+    "description": "Advanced deepfake and overlay detection for video interviews",
+    
+    "permissions": [
+      "storage",
+      "tabs",
+      "activeTab",
+      "webRequest",
+      "scripting"
+    ],
+    
+    "host_permissions": [
+      "https://meet.google.com/*",
+      "https://teams.microsoft.com/*",
+      "https://zoom.us/*",
+      "https://*.zoom.us/*",
+      "https://app.slack.com/*",
+      "https://*.webex.com/*",
+      "https://*.whereby.com/*",
+      "http://localhost:8000/*"
+    ],
+    
+    "background": {
+      "service_worker": "background.js"
+    },
+    
+    "content_scripts": [
+      {
+        "matches": [
+          "https://meet.google.com/*",
+          "https://teams.microsoft.com/*",
+          "https://zoom.us/*",
+          "https://*.zoom.us/*",
+          "https://app.slack.com/huddle/*",
+          "https://*.webex.com/*",
+          "https://*.whereby.com/*"
+        ],
+        "js": ["content_script.js"],
+        "run_at": "document_idle",
+        "all_frames": false
+      }
+    ],
+    
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon-16.png",
+        "48": "icons/icon-48.png",
+        "128": "icons/icon-128.png"
+      }
+    },
+    
+    "icons": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    },
+    
+    "web_accessible_resources": [
+      {
+        "resources": ["inject.js"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }

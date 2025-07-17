@@ -1,0 +1,109 @@
+# Core Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+tensorflow>=2.13.0  # For additional models
+onnx>=1.14.0
+onnxruntime-gpu>=1.15.0
+
+# Computer Vision
+opencv-python>=4.8.0
+opencv-contrib-python>=4.8.0
+mediapipe>=0.10.0
+dlib>=19.24.0
+face-recognition>=1.3.0
+albumentations>=1.3.0
+scikit-image>=0.21.0
+imageio>=2.31.0
+imageio-ffmpeg>=0.4.8
+
+# Scientific Computing
+numpy>=1.24.0
+scipy>=1.11.0
+scikit-learn>=1.3.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Deep Learning Models
+timm>=0.9.0  # PyTorch Image Models
+transformers>=4.30.0  # For vision transformers
+efficientnet-pytorch>=0.7.1
+
+# Audio Processing (for lip-sync)
+librosa>=0.10.0
+pydub>=0.25.1
+soundfile>=0.12.1
+
+# API and Web
+fastapi>=0.100.0
+uvicorn[standard]>=0.23.0
+websockets>=11.0
+python-multipart>=0.0.6
+aiofiles>=23.0.0
+httpx>=0.24.0
+pydantic>=2.0.0
+
+# Video Processing
+decord>=0.6.0  # Efficient video reading
+av>=10.0.0  # PyAV for video manipulation
+vidgear>=0.3.0  # Video stabilization
+
+# Feature Detection
+mtcnn>=0.1.1  # Face detection
+# retinaface>=0.0.1  # Advanced face detection
+insightface>=0.7.3  # Face analysis
+
+# Monitoring and Logging
+wandb>=0.15.0  # Experiment tracking
+tensorboard>=2.13.0
+tqdm>=4.65.0
+colorlog>=6.7.0
+python-json-logger>=2.0.7
+
+# Testing
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+pytest-mock>=3.11.0
+
+# Data Handling
+h5py>=3.9.0
+lmdb>=1.4.1
+pyarrow>=12.0.0
+
+# Image Quality Assessment
+piq>=0.7.0  # Perceptual Image Quality
+pytorch-msssim>=0.2.1
+lpips>=0.1.4  # Learned Perceptual Image Patch Similarity
+
+# Additional Analysis Tools
+xgboost>=1.7.0  # For ensemble methods
+lightgbm>=4.0.0  # For fast gradient boosting
+catboost>=1.2  # For categorical features
+
+# Optimization
+numba>=0.57.0  # JIT compilation
+cupy>=12.0.0  # GPU arrays (optional, for CUDA)
+
+# Configuration
+python-dotenv>=1.0.0
+pyyaml>=6.0
+omegaconf>=2.3.0
+
+# Development Tools
+black>=23.0.0
+flake8>=6.0.0
+isort>=5.12.0
+mypy>=1.4.0
+pre-commit>=3.3.0
+
+# System Requirements
+Pillow>=10.0.0
+requests>=2.31.0
+click>=8.1.0
+rich>=13.4.0  # Beautiful terminal output
+
+# Specific versions for compatibility
+protobuf>=3.20.0,<4.0.0  # For TensorFlow compatibility
+typing-extensions>=4.7.0
+setuptools>=68.0.0
